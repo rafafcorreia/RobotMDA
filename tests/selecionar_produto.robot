@@ -1,6 +1,7 @@
 *** Settings ***
 Library    AppiumLibrary
 
+Test Setup    Open Application    ${REMOTE_URL}   platformName=${platformName}  appium:platformVersion=${appium:platformVersion}  appium:deviceName=${appium:deviceName}  appium:deviceOrientation=${appium:deviceOrientation}  appium:app=${appium:app}  appium:appPackage=${appium:appPackage}  appium:appActivity=${appium:appActivity}
 Test Teardown   Close Application
 
 *** Variables ***
@@ -16,8 +17,6 @@ ${appium:appActivity}    com.saucelabs.mydemoapp.android.view.activities.SplashA
 
 *** Test Cases ***
 Selecionar Sauce Labs Backpack
-    Open Application    ${REMOTE_URL}   platformName=${platformName}  appium:platformVersion=${appium:platformVersion}  appium:deviceName=${appium:deviceName}  appium:deviceOrientation=${appium:deviceOrientation}  appium:app=${appium:app}  appium:appPackage=${appium:appPackage}  appium:appActivity=${appium:appActivity}
-    
     Element Should Contain Text    id=com.saucelabs.mydemoapp.android:id/productTV    Products
     Click Element    accessibility_id=Sauce Labs Backpack
     Element Should Contain Text    id=com.saucelabs.mydemoapp.android:id/productTV    Sauce Labs Backpack
