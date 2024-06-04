@@ -17,13 +17,13 @@ ${appium:appActivity}    com.saucelabs.mydemoapp.android.view.activities.SplashA
 
 *** Test Cases ***
 Selecionar Sauce Labs Backpack
-    Element Should Contain Text    id=com.saucelabs.mydemoapp.android:id/productTV    Products
+    Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Products
     Click Element    accessibility_id=Sauce Labs Backpack
-    Element Should Contain Text    id=com.saucelabs.mydemoapp.android:id/productTV    Sauce Labs Backpack
+    Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Sauce Labs Backpack
     Swipe    462    1575    488    553
-    Element Should Contain Text    id=com.saucelabs.mydemoapp.android:id/priceTV      $ 29.99
+    Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/priceTV      $ 29.99
     Click Element    accessibility_id=Tap to add product to cart
     Click Element    id=com.saucelabs.mydemoapp.android:id/cartIV
-    Element Should Contain Text     id=com.saucelabs.mydemoapp.android:id/productTV    My Cart
-    Element Should Contain Text     id=com.saucelabs.mydemoapp.android:id/titleTV      Sauce Labs Backpack
-    Element Should Contain Text     id=com.saucelabs.mydemoapp.android:id/priceTV      $ 29.99
+    Element Text Should Be     id=com.saucelabs.mydemoapp.android:id/productTV    My Cart
+    Element Text Should Be     id=com.saucelabs.mydemoapp.android:id/titleTV      Sauce Labs Backpack
+    Element Text Should Be     id=com.saucelabs.mydemoapp.android:id/priceTV      $ 29.99
