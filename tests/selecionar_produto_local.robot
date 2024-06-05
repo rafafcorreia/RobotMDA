@@ -1,22 +1,13 @@
 *** Settings ***
 Library    AppiumLibrary
+Resource    ../resources/capabilities.resource
 
-Test Setup    Open Application    ${REMOTE_URL}   platformName=${platformName}  appium:platformVersion=${appium:platformVersion}  appium:deviceName=${appium:deviceName}  appium:deviceOrientation=${appium:deviceOrientation}  appium:app=${appium:app}  appium:appPackage=${appium:appPackage}  appium:appActivity=${appium:appActivity}
+Test Setup    Local Open Application
 Test Teardown   Close Application
-
-*** Variables ***
-${REMOTE_URL}      https://InstrutorIterasys22:%{SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub
-${platformName}    Android
-${appium:platformVersion}    9.0
-${appium:deviceName}    Samsung Galaxy S9 FHD GoogleAPI Emulator
-${appium:deviceOrientation}    portrait
-${appium:app}    storage:filename=mda-2.0.1-22.apk
-${appium:appPackage}    com.saucelabs.mydemoapp.android
-${appium:appActivity}    com.saucelabs.mydemoapp.android.view.activities.SplashActivity
-
 
 *** Test Cases ***
 Selecionar Sauce Labs Backpack
+    Wait Until Element Is Visible    id=com.saucelabs.mydemoapp.android:id/productTV    10000ms
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Products
     Click Element    accessibility_id=Sauce Labs Backpack
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Sauce Labs Backpack
