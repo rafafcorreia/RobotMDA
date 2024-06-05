@@ -22,12 +22,12 @@ Selecionar produto
     Wait Until Element Is Visible    id=com.saucelabs.mydemoapp.android:id/productTV    10000ms
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Products
     FOR    ${index}    IN RANGE    ${swipe_count}
-        Swipe    462    1575    488    553
+        Swipe Up
     END
     Click Element    accessibility_id=${product_name}
     Sleep    500ms
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    ${product_name}
-    Swipe    462    1575    488    553
+    Swipe Up
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/priceTV      ${product_price}
     Click Element    accessibility_id=Tap to add product to cart
     Click Element    id=com.saucelabs.mydemoapp.android:id/cartIV

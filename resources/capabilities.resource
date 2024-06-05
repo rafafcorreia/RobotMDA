@@ -20,3 +20,6 @@ Local Open Application
 
 Sauce Labs Open Application
     Open Application    ${REMOTE_URL_SAUCE_LABS}   platformName=${platformName}  appium:platformVersion=${appium:platformVersion}  appium:deviceName=${appium:deviceNameSauceLabs}  appium:deviceOrientation=${appium:deviceOrientation}  appium:app=${appium:app}  appium:appPackage=${appium:appPackage}  appium:appActivity=${appium:appActivity}
+
+Swipe Up
+    Swipe    462    1575    488    553

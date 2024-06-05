@@ -11,7 +11,7 @@ Selecionar Sauce Labs Backpack
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Products
     Click Element    accessibility_id=Sauce Labs Backpack
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/productTV    Sauce Labs Backpack
-    Swipe    462    1575    488    553
+    Swipe Up
     Element Text Should Be    id=com.saucelabs.mydemoapp.android:id/priceTV      $ 29.99
     Click Element    accessibility_id=Tap to add product to cart
     Click Element    id=com.saucelabs.mydemoapp.android:id/cartIV
