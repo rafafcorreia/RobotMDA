@@ -10,7 +10,7 @@ ${appium:platformVersion}    9.0
 ${appium:deviceNameLocal}    emulator-5554
 ${appium:deviceNameSauceLabs}    Samsung Galaxy S9 FHD GoogleAPI Emulator
 ${appium:deviceOrientation}    portrait
-${appium:app}    mda-2.0.1-22.apk
+${appium:app}    storage:filename=mda-2.0.1-22.apk
 ${appium:appPackage}    com.saucelabs.mydemoapp.android
 ${appium:appActivity}    com.saucelabs.mydemoapp.android.view.activities.SplashActivity
 
